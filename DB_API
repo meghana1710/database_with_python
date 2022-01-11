@@ -1,0 +1,13 @@
+The Python code connects to the database using DB-API calls.
+DB-API is Python's standard API for accessing relational databases. 
+It is a standard that allows you to write a single program that works with multiple kinds of relational databases instead of writing a separate program for each one.
+So, if you learn the DB-API functions, then you can apply that knowledge to use any database with Python.
+The two main concepts in the Python DB-API are connection objects and query objects. 
+You use connection objects to connect to a database and manage your transactions. 
+Cursor objects are used to run queries. You open a cursor object and then run queries.
+First, you import your database module by using the connect API from that module. 
+To open a connection to the database, you use the connect constructor and pass in the parameters, that is, the database name, username, and password. 
+The connect function returns connection object. After this, you create a cursor object on the connection object. The cursor is used to run queries and fetch results. 
+After running the queries, using the cursor, we also use the cursor to fetch the results of the query. 
+Finally, when the system is done running the queries, it frees all resources by closing the connection. 
+Remember that it is always important to close connections to avoid unused connections taking up resources. 
