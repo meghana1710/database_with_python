@@ -5,9 +5,23 @@ So, if you learn the DB-API functions, then you can apply that knowledge to use 
 The two main concepts in the Python DB-API are connection objects and query objects. 
 You use connection objects to connect to a database and manage your transactions. 
 Cursor objects are used to run queries. You open a cursor object and then run queries.
+
+Steps:
 First, you import your database module by using the connect API from that module. 
 To open a connection to the database, you use the connect constructor and pass in the parameters, that is, the database name, username, and password. 
 The connect function returns connection object. After this, you create a cursor object on the connection object. The cursor is used to run queries and fetch results. 
 After running the queries, using the cursor, we also use the cursor to fetch the results of the query. 
 Finally, when the system is done running the queries, it frees all resources by closing the connection. 
 Remember that it is always important to close connections to avoid unused connections taking up resources. 
+
+Connection methods:
+The cursor() method, which returns a new cursor object using the connection.
+The commit() method, which is used to commit any pending transaction to the database.
+The rollback() method, which causes the database to roll-back to the start of any pending transaction.
+The close() method, which is used to close a database connection. 
+
+You can use SQL Magic commands to execute queries more easily from Jupyter Notebooks. 
+Magic commands have the general format %sql select * from tablename.
+Cell magics start with a double %% (percent) sign and apply to the entire cell.
+Line magics start with a single % (percent) sign and apply to a particular line in a cell.
+
